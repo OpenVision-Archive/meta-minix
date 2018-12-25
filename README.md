@@ -1,2 +1,2 @@
 # meta-minix
-MINIX BSP layer for PLi's OE
+MINIX BSP layer for Open Vision
