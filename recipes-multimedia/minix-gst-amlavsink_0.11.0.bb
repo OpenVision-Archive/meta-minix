@@ -13,7 +13,7 @@ inherit autotools pkgconfig
 DEPENDS = "gstreamer minix-libamcodec-${MACHINE} minix-libamavutils-${MACHINE}"
 RDEPENDS_{PN} = "minix-libamavutils-${MACHINE}"
 
-SRC_URI = "https://raw.githubusercontent.com/PLi-metas/amlogic-libs/master/gst-aml-plugins-0.11.0.zip \
+SRC_URI = "https://raw.githubusercontent.com/OpenVisionE2/amlogic-libs/master/gst-aml-plugins-0.11.0.zip \
            file://osd_fix.patch \
 "
 
