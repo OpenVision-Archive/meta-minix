@@ -1,3 +1,5 @@
+BOX_BRAND = "minix"
+
 # MINIX BSP default settings
 LINUX_VERSION_EXTENSION ?= ""
 
