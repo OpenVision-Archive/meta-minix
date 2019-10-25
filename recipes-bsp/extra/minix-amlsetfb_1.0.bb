@@ -2,7 +2,7 @@ SUMMARY = "SysV init scripts for Amlogic framebuffer set-up"
 DESCRIPTION = "Provides basic set-up for the amlogic framebuffer"
 SECTION = "base"
 
-COMPATIBLE_MACHINE = "x8hp"
+COMPATIBLE_MACHINE = "^(x8hp)$"
 
 include conf/license/license-gplv2.inc
 
