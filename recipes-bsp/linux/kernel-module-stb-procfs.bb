@@ -1,4 +1,4 @@
-SUMMARY = "STB-FAKE procfs module"
+SUMMARY = "procfs module"
 LICENSE = "none"
 LIC_FILES_CHKSUM = "file://Makefile;md5=6c893dc2fac3542b98a1e5800bdae169"
 

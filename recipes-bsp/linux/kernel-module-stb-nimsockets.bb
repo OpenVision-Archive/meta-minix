@@ -1,4 +1,4 @@
-SUMMARY = "STB-FAKE nimsockets module"
+SUMMARY = "nimsockets module"
 LICENSE = "none"
 LIC_FILES_CHKSUM = "file://Makefile;md5=8a7f149c3705b8a11c5b3c062cc314fe"
 
