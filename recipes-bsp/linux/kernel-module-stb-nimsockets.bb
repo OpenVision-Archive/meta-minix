@@ -12,6 +12,6 @@ SRC_URI = "file://stb-nimsockets.c \
 S = "${WORKDIR}"
 
 do_install() {
-	install -d ${D}${base_libdir}/modules/${KERNEL_VERSION}/extra
-	install -m 0644 ${S}/stb-nimsockets.ko* ${D}${base_libdir}/modules/${KERNEL_VERSION}/extra
+	install -d ${D}${nonarch_base_libdir}/modules/${KERNEL_VERSION}/extra
+	install -m 0644 ${S}/stb-nimsockets.ko* ${D}${nonarch_base_libdir}/modules/${KERNEL_VERSION}/extra
 }
