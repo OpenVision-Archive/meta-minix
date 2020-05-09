@@ -28,10 +28,8 @@ do_install() {
     install -m 0755 ${S}/include/* ${D}${includedir}/amlogic/amadec
     install -m 0755 ${S}/libamadec.so ${D}/${libdir}
     install -m 0755 ${S}/acodec_lib/*.so  ${D}/${libdir}
-    if [ "${MACHINE}" = "minixplay" ]; then
-        install -m 0644 ${S}/${FWL}/*.bin  ${D}${nonarch_base_libdir}/firmware/
-        install -m 0644 ${WORKDIR}/audiodsp_codec_ddp_dcv.bin ${D}${nonarch_base_libdir}/firmware/
-    fi
+    install -m 0644 ${S}/${FWL}/*.bin  ${D}${nonarch_base_libdir}/firmware/
+    install -m 0644 ${WORKDIR}/audiodsp_codec_ddp_dcv.bin ${D}${nonarch_base_libdir}/firmware/
     install -m 0644 ${WORKDIR}/libamadec.pc ${D}${libdir}/pkgconfig/
 }
 
