@@ -22,7 +22,7 @@ COMPATIBLE_MACHINE = "^(x8hp)$"
 
 SRC_URI = "http://source.mynonpublic.com/wetek/linux-wetek-3.10.y-master.tar.gz \
     file://defconfig \
-    file://${OPENVISION_BASE}/openvision-oe/recipes-linux/kernel-patches/kernel-add-support-for-gcc6.patch \
+    file://${OPENVISION_BASE}/openvision-oe/recipes-linux/kernel-patches/kernel-add-support-for-gcc${VISIONGCCVERSION}.patch \
     file://tsynch265.patch \
     file://meson8m2_n200_2G.dtb \
     file://s812_autoscript \
