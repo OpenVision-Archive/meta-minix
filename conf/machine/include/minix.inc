@@ -13,3 +13,108 @@ DEPENDS_append_pn-enigma2 = " libdvbcsa minix-libamcodec-${MACHINE} minix-libama
 EXTRA_OECONF_append_pn-tuxtxt-enigma2 = " --with-fbdev=/dev/fb0"
 CC_append_pn-showiframe = " -DHAVE_AMLOGIC -I${STAGING_INCDIR}/amlogic/amcodec -lamcodec"
 DEPENDS_append_pn-showiframe = " minix-libamcodec-${MACHINE}"
+
+GST_VERSION = "0.10"
+
+SOC_FAMILY = "AML8726"
+
+IMAGE_CLASSES += "image_types_minix"
+
+MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
+    minix-gst-amlavsink \
+    minix-gst-app \
+    minix-gst-amlavout \
+    gst-fluendo-mpegdemux \
+    "
+
+DVBPROVIDER = "kernel"
+
+MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS += "\
+    kernel-module-cdfs \
+    kernel-module-stb-procfs \
+    kernel-module-stb-nimsockets \
+    kernel-module-sysfillrect \
+    kernel-module-syscopyarea \
+    kernel-module-mceusb \
+    kernel-module-rc-core \
+    kernel-module-mali \
+    kernel-module-dhd \
+    kernel-module-CH341 \
+    kernel-module-aml_pmu_dev \
+    minix-amlsetfb \
+    amremote \
+    firmware-ap6330 \
+    "
+
+MACHINE_EXTRA_RRECOMMENDS += "\
+    minix-libamplayer-${MACHINE} \
+    minix-libamavutils-${MACHINE} \
+    minix-libamadec-${MACHINE} \
+    minix-libamcodec-${MACHINE} \
+    "
+
+KERNEL_MODULE_AUTOLOAD += "xfs"
+
+KERNEL_MODULE_AUTOLOAD += "\
+    stb-procfs \
+    stb-nimsockets \
+    sysfillrect \
+    syscopyarea \
+    mceusb \
+    rc-core \
+    mali \
+    dhd \
+    CH341 \
+    rfcomm \
+    hidp \
+    aml_pmu_dev \
+"
+
+# Uncomment the following line to enable the hard floating point abi. Note that
+# this breaks some binary libraries and 3D (neither of which ship with
+# meta-yocto). For maximum compatibility, leave this disabled.
+DEFAULTTUNE ?= "cortexa9hf-neon"
+require conf/machine/include/tune-cortexa9.inc
+
+IMAGE_FSTYPES += "sdcard"
+IMAGE_ROOTFS_SIZE = "976562"
+IMAGE_EXTRA_SPACE = "0"
+IMAGE_OVERHEAD_FACTOR = "1.0"
+
+# Serial console to be used
+SERIAL_CONSOLE = "115200 ttyS0"
+
+PREFERRED_PROVIDER_virtual/kernel = "linux-minix"
+PREFERRED_VERSION_linux-wetek = "3.10.93"
+
+KERNEL_IMAGETYPE = "uImage"
+KERNEL_DEVICETREE = "meson8m2_n200_2G.dtd meson8m2_n200_2G.dtb"
+
+#specify u-boot parameters
+PREFERRED_PROVIDER_virtual/bootloader ?= "u-boot-hardkernel"
+PREFERRED_PROVIDER_u-boot ?= "u-boot-hardkernel"
+PREFERRED_VERSION_u-boot-hardkernel ?= "2015.01"
+
+UBOOT_MACHINE = "odroidc2_defconfig"
+
+UBOOT_ENTRYPOINT  = "0x80008000"
+UBOOT_LOADADDRESS = "0x80008000"
+
+IMAGEDIR ?= "${MACHINE}"
+
+IMAGE_CMD_sdcard_append = "\
+    mkdir -p ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}; \
+    mv ${DEPLOY_DIR_IMAGE}/${IMAGE_NAME}.img ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/${IMAGE_NAME}.img; \
+    echo ${IMAGE_NAME} > ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/imageversion; \
+    rm -f ${DEPLOY_DIR_IMAGE}/*.zip; \
+    cd ${DEPLOY_DIR_IMAGE}; \
+    zip ${IMAGE_NAME}_sdcard.zip ${IMAGEDIR}/*; \
+    rm -f ${DEPLOY_DIR_IMAGE}/*.ext4; \
+    rm -f ${DEPLOY_DIR_IMAGE}/*.img; \
+    rm -Rf ${IMAGEDIR}; \
+    "
+
+MACHINE_FEATURES = "bluetooth fb meson8 usbhost vfat alsa dvb-c nolcd nogamma nofhdskin"
+
+# We know about rtc
+MACHINE_FEATURES_BACKFILL_CONSIDERED += "rtc"
