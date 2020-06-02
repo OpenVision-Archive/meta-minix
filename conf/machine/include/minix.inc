@@ -25,12 +25,6 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	minix-gst-app \
 	minix-gst-amlavout \
 	gst-fluendo-mpegdemux \
-	"
-
-DVBPROVIDER = "kernel"
-
-MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS += "\
-	kernel-module-cdfs \
 	kernel-module-stb-procfs \
 	kernel-module-stb-nimsockets \
 	kernel-module-sysfillrect \
@@ -45,6 +39,8 @@ MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS += "\
 	amremote \
 	firmware-ap6330 \
 	"
+
+DVBPROVIDER = "kernel"
 
 MACHINE_EXTRA_RRECOMMENDS += "\
 	minix-libamplayer-${MACHINE} \
