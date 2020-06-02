@@ -21,54 +21,53 @@ SOC_FAMILY = "AML8726"
 IMAGE_CLASSES += "image_types_minix"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
-    minix-gst-amlavsink \
-    minix-gst-app \
-    minix-gst-amlavout \
-    gst-fluendo-mpegdemux \
-    "
+	minix-gst-amlavsink \
+	minix-gst-app \
+	minix-gst-amlavout \
+	gst-fluendo-mpegdemux \
+	"
 
 DVBPROVIDER = "kernel"
 
 MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS += "\
-    kernel-module-cdfs \
-    kernel-module-stb-procfs \
-    kernel-module-stb-nimsockets \
-    kernel-module-sysfillrect \
-    kernel-module-syscopyarea \
-    kernel-module-mceusb \
-    kernel-module-rc-core \
-    kernel-module-mali \
-    kernel-module-dhd \
-    kernel-module-CH341 \
-    kernel-module-aml_pmu_dev \
-    minix-amlsetfb \
-    amremote \
-    firmware-ap6330 \
-    "
+	kernel-module-cdfs \
+	kernel-module-stb-procfs \
+	kernel-module-stb-nimsockets \
+	kernel-module-sysfillrect \
+	kernel-module-syscopyarea \
+	kernel-module-mceusb \
+	kernel-module-rc-core \
+	kernel-module-mali \
+	kernel-module-dhd \
+	kernel-module-CH341 \
+	kernel-module-aml_pmu_dev \
+	minix-amlsetfb \
+	amremote \
+	firmware-ap6330 \
+	"
 
 MACHINE_EXTRA_RRECOMMENDS += "\
-    minix-libamplayer-${MACHINE} \
-    minix-libamavutils-${MACHINE} \
-    minix-libamadec-${MACHINE} \
-    minix-libamcodec-${MACHINE} \
-    "
-
-KERNEL_MODULE_AUTOLOAD += "xfs"
+	minix-libamplayer-${MACHINE} \
+	minix-libamavutils-${MACHINE} \
+	minix-libamadec-${MACHINE} \
+	minix-libamcodec-${MACHINE} \
+	"
 
 KERNEL_MODULE_AUTOLOAD += "\
-    stb-procfs \
-    stb-nimsockets \
-    sysfillrect \
-    syscopyarea \
-    mceusb \
-    rc-core \
-    mali \
-    dhd \
-    CH341 \
-    rfcomm \
-    hidp \
-    aml_pmu_dev \
-"
+	stb-procfs \
+	stb-nimsockets \
+	sysfillrect \
+	syscopyarea \
+	mceusb \
+	rc-core \
+	mali \
+	dhd \
+	CH341 \
+	rfcomm \
+	hidp \
+	aml_pmu_dev \
+	xfs \
+	"
 
 # Uncomment the following line to enable the hard floating point abi. Note that
 # this breaks some binary libraries and 3D (neither of which ship with
