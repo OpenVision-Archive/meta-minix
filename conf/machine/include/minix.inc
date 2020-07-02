@@ -33,7 +33,7 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	kernel-module-rc-core \
 	kernel-module-mali \
 	kernel-module-dhd \
-	kernel-module-CH341 \
+	kernel-module-ch341 \
 	kernel-module-aml_pmu_dev \
 	minix-amlsetfb \
 	amremote \
@@ -58,7 +58,7 @@ KERNEL_MODULE_AUTOLOAD += "\
 	rc-core \
 	mali \
 	dhd \
-	CH341 \
+	ch341 \
 	rfcomm \
 	hidp \
 	aml_pmu_dev \
