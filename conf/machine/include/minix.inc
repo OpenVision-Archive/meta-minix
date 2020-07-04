@@ -27,14 +27,7 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	gst-fluendo-mpegdemux \
 	kernel-module-stb-procfs \
 	kernel-module-stb-nimsockets \
-	kernel-module-sysfillrect \
-	kernel-module-syscopyarea \
-	kernel-module-mceusb \
-	kernel-module-rc-core \
-	kernel-module-mali \
-	kernel-module-dhd \
-	kernel-module-ch341 \
-	kernel-module-aml_pmu_dev \
+	kernel-modules \
 	minix-amlsetfb \
 	amremote \
 	firmware-ap6330 \
