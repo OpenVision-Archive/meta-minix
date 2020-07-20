@@ -100,7 +100,7 @@ IMAGE_CMD_sdcard_append = "\
     rm -Rf ${IMAGEDIR}; \
     "
 
-MACHINE_FEATURES = "bluetooth fb meson8 usbhost vfat alsa dvb-c nolcd nogamma nofhdskin"
+MACHINE_FEATURES = "bluetooth fb meson8 usbhost vfat alsa dvb-c nolcd nogamma nofhdskin HDMI"
 
 # We know about rtc
 MACHINE_FEATURES_BACKFILL_CONSIDERED += "rtc"
