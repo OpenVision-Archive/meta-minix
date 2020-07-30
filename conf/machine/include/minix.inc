@@ -61,7 +61,7 @@ KERNEL_MODULE_AUTOLOAD += "\
 # Uncomment the following line to enable the hard floating point abi. Note that
 # this breaks some binary libraries and 3D (neither of which ship with
 # meta-yocto). For maximum compatibility, leave this disabled.
-DEFAULTTUNE ?= "cortexa9hf-neon"
+DEFAULTTUNE = "cortexa9hf-neon"
 require conf/machine/include/tune-cortexa9.inc
 
 IMAGE_FSTYPES += "sdcard"
@@ -100,7 +100,7 @@ IMAGE_CMD_sdcard_append = "\
     rm -Rf ${IMAGEDIR}; \
     "
 
-MACHINE_FEATURES = "bluetooth fb meson8 usbhost vfat alsa dvb-c nolcd nogamma nofhdskin HDMI"
+MACHINE_FEATURES += "bluetooth fb meson8 usbhost vfat alsa dvb-c nolcd nogamma nofhdskin HDMI"
 
 # We know about rtc
 MACHINE_FEATURES_BACKFILL_CONSIDERED += "rtc"
