@@ -55,7 +55,6 @@ KERNEL_MODULE_AUTOLOAD += "\
 	rfcomm \
 	hidp \
 	aml_pmu_dev \
-	xfs \
 	"
 
 # Uncomment the following line to enable the hard floating point abi. Note that
