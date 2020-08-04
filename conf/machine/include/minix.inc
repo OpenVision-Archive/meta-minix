@@ -16,7 +16,7 @@ DEPENDS_append_pn-showiframe = " minix-libamcodec-${MACHINE}"
 
 GST_VERSION = "0.10"
 
-SOC_FAMILY = "AML8726"
+SOC_FAMILY = "aml8726"
 
 IMAGE_CLASSES += "image_types_minix"
 
@@ -103,3 +103,5 @@ MACHINE_FEATURES += "bluetooth fb meson8 usbhost vfat alsa dvb-c nolcd nogamma n
 
 # We know about rtc
 MACHINE_FEATURES_BACKFILL_CONSIDERED += "rtc"
+
+EXTRA_ALSA = "aml8726"
