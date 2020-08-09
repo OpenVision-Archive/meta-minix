@@ -1,3 +1,5 @@
+KERNELVERSION = "3.10.93"
+
 BOX_BRAND = "minix"
 
 # MINIX BSP default settings
@@ -72,7 +74,7 @@ IMAGE_OVERHEAD_FACTOR = "1.0"
 SERIAL_CONSOLE = "115200 ttyS0"
 
 PREFERRED_PROVIDER_virtual/kernel = "linux-minix"
-PREFERRED_VERSION_linux-wetek = "3.10.93"
+PREFERRED_VERSION_linux-wetek = "${KERNELVERSION}"
 
 KERNEL_IMAGETYPE = "uImage"
 KERNEL_DEVICETREE = "meson8m2_n200_2G.dtd meson8m2_n200_2G.dtb"
