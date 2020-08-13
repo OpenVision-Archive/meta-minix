@@ -107,3 +107,5 @@ MACHINE_FEATURES += "bluetooth fb meson8 usbhost vfat alsa dvb-c nolcd nogamma n
 MACHINE_FEATURES_BACKFILL_CONSIDERED += "rtc"
 
 EXTRA_ALSA = "aml8726"
+
+RCNAME = "x8hp"
