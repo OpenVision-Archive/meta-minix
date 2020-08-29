@@ -33,16 +33,13 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	minix-amlsetfb \
 	amremote \
 	firmware-ap6330 \
-	"
-
-DVBPROVIDER = "kernel"
-
-MACHINE_EXTRA_RRECOMMENDS += "\
 	minix-libamplayer-${MACHINE} \
 	minix-libamavutils-${MACHINE} \
 	minix-libamadec-${MACHINE} \
 	minix-libamcodec-${MACHINE} \
 	"
+
+DVBPROVIDER = "kernel"
 
 KERNEL_MODULE_AUTOLOAD += "\
 	stb-procfs \
